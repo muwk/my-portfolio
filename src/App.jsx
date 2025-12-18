@@ -35,14 +35,14 @@ export default function App() {
             <div className="max-w-2xl">
               <h2 className="text-4xl font-semibold mb-4">Welcome</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                This website needs improvements.
+                This website is still under construction.
               </p>
             </div>
 
             {/* Image Container */}
             <div className="flex-shrink-0">
               <img 
-                src="D:\Data Science\Portfolio\my-portfolio\MyPhoto.jpg" /* REPLACE THIS WITH YOUR IMAGE PATH */
+                src="/my-portfolio/MyPhoto.jpg" /* REPLACE THIS WITH YOUR IMAGE PATH */
                 alt="Mohammad Umair" 
                 /* Styling: Width/Height 64 (256px), Rounded corners, Gray border */
                 className="w-64 h-64 object-cover rounded-2xl border-2 border-gray-800 shadow-lg"
@@ -75,7 +75,7 @@ export default function App() {
           <section className="max-w-3xl">
             <h2 className="text-4xl font-semibold mb-4">About Me</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              i think neural networks are amazing
+              tars.set_humor(level=100)
             </p>
           </section>
         )}
