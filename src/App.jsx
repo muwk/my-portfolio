@@ -84,7 +84,7 @@ export default function App() {
           <section className="max-w-3xl">
             <h2 className="text-4xl font-semibold mb-4">Contact</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Email: umair@example.com <br /> LinkedIn: linkedin.com/in/umair
+              Email: umairwachkoo@gmail.com <br /> LinkedIn: https://www.linkedin.com/in/mohammad-umair-858566289/
             </p>
           </section>
         )}
