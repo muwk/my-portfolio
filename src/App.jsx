@@ -8,13 +8,16 @@ export default function App() {
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navbar */}
       <nav className="
-  fixed top-0 left-0
-  h-auto md:h-full
+  fixed md:static
+  top-0 left-0
   w-full md:w-52
-  border-r border-gray-800
+  h-auto md:h-screen
+  border-b md:border-b-0 md:border-r border-gray-800
   px-6 py-6
-  flex md:flex-col gap-6
-  bg-black z-50
+  flex flex-row md:flex-col
+  gap-6
+  bg-black
+  z-50
 ">
         <h1 className="text-2xl font-bold mb-6">Mohammad Umair</h1>
         <div className="flex flex-col gap-4 text-lg">
