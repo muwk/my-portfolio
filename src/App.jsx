@@ -7,7 +7,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 h-full w-52 border-r border-gray-800 px-6 py-10 flex flex-col gap-6 bg-black">
+      <nav className="
+  fixed top-0 left-0
+  h-auto md:h-full
+  w-full md:w-52
+  border-r border-gray-800
+  px-6 py-6
+  flex md:flex-col gap-6
+  bg-black z-50
+">
         <h1 className="text-2xl font-bold mb-6">Mohammad Umair</h1>
         <div className="flex flex-col gap-4 text-lg">
           {tabs.map((tab) => (
@@ -25,11 +33,21 @@ export default function App() {
       </nav>
 
       {/* Page Content */}
-      <main className="ml-60 p-10 animate-fadeIn">
+      <main className="
+  pt-24 md:pt-10
+  md:ml-60
+  p-6 md:p-10
+  animate-fadeIn
+">
         {active === "Home" && (
           /* 1. Changed max-w-3xl to max-w-5xl to fit both text and image */
           /* 2. Added 'flex', 'items-center', and 'justify-between' to put them side-by-side */
-          <section className="max-w-5xl w-full flex flex-row items-center justify-between gap-10">
+          <section className="
+  max-w-5xl w-full
+  flex flex-col md:flex-row
+  items-center justify-between
+  gap-10
+">
             
             {/* Text Container */}
             <div className="max-w-2xl">
