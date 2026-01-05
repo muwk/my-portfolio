@@ -8,16 +8,16 @@ export default function App() {
     <div className="min-h-screen bg-black text-white font-sans flex flex-col md:flex-row">
       {/* --- Sidebar Navbar --- */}
       <nav className="
-        fixed
-        top-0 left-0
-        w-full md:w-64
-        h-auto md:h-screen
-        border-b md:border-b-0 md:border-r border-gray-800
-        px-6 py-4 md:py-12
-        flex flex-col
-        bg-black/90 backdrop-blur-md md:bg-black
-        z-50
-      ">
+  fixed md:static
+  top-0 left-0
+  w-full md:w-64
+  h-auto md:h-screen
+  border-b md:border-b-0 md:border-r border-gray-800
+  px-6 py-4 md:py-12
+  flex flex-col
+  bg-black/90 backdrop-blur-md md:bg-black
+  z-50
+">
         <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-12 text-center md:text-left tracking-tight">
           Mohammad Umair
         </h1>
@@ -42,19 +42,12 @@ export default function App() {
 
       {/* --- Main Content Area --- */}
       <main className="
-        flex-1
-        /* Mobile: Top padding to clear fixed nav */
-        pt-32 
-        /* PC: Left margin to clear the sidebar and center content vertically */
-        md:pt-0 
-        md:ml-64 
-        md:min-h-screen
-        md:flex 
-        md:items-center 
-        p-6 
-        md:p-16
-        animate-fadeIn
-      ">
+  flex-1
+  pt-32 md:pt-0
+  md:flex md:items-center
+  p-6 md:p-16
+  animate-fadeIn
+">
         
         {/* --- Home Section --- */}
         {active === "Home" && (
