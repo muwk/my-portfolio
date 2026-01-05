@@ -8,7 +8,7 @@ export default function App() {
     <div className="min-h-screen bg-black text-white font-sans flex flex-col md:flex-row">
       {/* --- Sidebar Navbar --- */}
       <nav className="
-        fixed md:static
+        fixed
         top-0 left-0
         w-full md:w-64
         h-auto md:h-screen
@@ -43,26 +43,33 @@ export default function App() {
       {/* --- Main Content Area --- */}
       <main className="
         flex-1
-        pt-32 md:pt-0 /* Padding for mobile fixed nav */
-        md:flex md:items-center /* Center content vertically on desktop */
-        p-6 md:p-16
+        /* Mobile: Top padding to clear fixed nav */
+        pt-32 
+        /* PC: Left margin to clear the sidebar and center content vertically */
+        md:pt-0 
+        md:ml-64 
+        md:min-h-screen
+        md:flex 
+        md:items-center 
+        p-6 
+        md:p-16
         animate-fadeIn
       ">
         
         {/* --- Home Section --- */}
         {active === "Home" && (
-          <section className="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+          <section className="max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Image (Shows first on mobile) */}
             <div className="flex-shrink-0 order-1 md:order-2">
               <img 
                 src="/my-portfolio/MyPhoto.jpg" 
                 alt="Mohammad Umair" 
-                className="w-44 h-44 md:w-72 md:h-72 object-cover rounded-3xl border-2 border-gray-800 shadow-2xl"
+                className="w-44 h-44 md:w-80 md:h-80 object-cover rounded-3xl border-2 border-gray-800 shadow-2xl"
               />
             </div>
 
-            {/* Text (Shows second on mobile) */}
-            <div className="text-center md:text-left order-2 md:order-1">
+            {/* Text Container */}
+            <div className="text-center md:text-left order-2 md:order-1 flex-1">
               <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
                 Welcome
               </h2>
@@ -77,7 +84,7 @@ export default function App() {
         {/* --- Projects Section --- */}
         {active === "Projects" && (
           <section className="max-w-3xl w-full">
-            <h2 className="text-4xl font-bold mb-8">Projects</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center md:text-left">Projects</h2>
             <div className="grid gap-6">
               <a 
                 href="https://github.com/muwk/EDA-Youtube_Trending_Videos" 
@@ -100,14 +107,14 @@ export default function App() {
 
         {/* --- About Section --- */}
         {active === "About" && (
-          <section className="max-w-2xl">
-            <h2 className="text-4xl font-bold mb-6">About Me</h2>
-            <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
+          <section className="max-w-2xl w-full">
+            <h2 className="text-4xl font-bold mb-6 text-center md:text-left">About Me</h2>
+            <div className="space-y-4 text-gray-400 text-lg leading-relaxed text-center md:text-left">
                <p>
                 I am a Data Analyst with a passion for Python development. 
                 I love exploring real-world datasets and uncovering stories hidden in numbers.
               </p>
-              <code className="block bg-gray-900 p-4 rounded-lg text-green-400">
+              <code className="block bg-gray-900 p-4 rounded-lg text-green-400 text-sm md:text-base overflow-x-auto">
                 tars.set_humor(level=100)
               </code>
             </div>
@@ -116,12 +123,12 @@ export default function App() {
 
         {/* --- Contact Section --- */}
         {active === "Contact" && (
-          <section className="max-w-3xl">
+          <section className="max-w-3xl w-full text-center md:text-left">
             <h2 className="text-4xl font-bold mb-8">Get in Touch</h2>
             <div className="space-y-6">
               <div>
                 <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Email</p>
-                <a href="mailto:umairwachkoo@gmail.com" className="text-xl hover:text-blue-400 transition-colors">
+                <a href="mailto:umairwachkoo@gmail.com" className="text-xl md:text-2xl hover:text-blue-400 transition-colors">
                   umairwachkoo@gmail.com
                 </a>
               </div>
@@ -130,7 +137,8 @@ export default function App() {
                 <a 
                   href="https://www.linkedin.com/in/mohammad-umair-858566289/" 
                   target="_blank" 
-                  className="text-xl hover:text-blue-400 transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-xl md:text-2xl hover:text-blue-400 transition-colors"
                 >
                   Connect with me
                 </a>
