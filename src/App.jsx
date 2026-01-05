@@ -67,8 +67,9 @@ export default function App() {
                 Welcome
               </h2>
               <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
-                Hi, I'm Mohammad. This website is still under construction. 
-                I'm a Data Analyst and Python Developer building cool things with data.
+                Hi, I’m Umair.
+                This is my personal portfolio — showcasing my skills, projects, and professional focus.
+                Explore to see what I build and how I think.
               </p>
             </div>
           </section>
@@ -104,8 +105,10 @@ export default function App() {
             <h2 className="text-4xl font-bold mb-6 text-center md:text-left">About Me</h2>
             <div className="space-y-4 text-gray-400 text-lg leading-relaxed text-center md:text-left">
                <p>
-                I am a Data Analyst with a passion for Python development. 
-                I love exploring real-world datasets and uncovering stories hidden in numbers.
+                I am a Data Scientist with a passion for Coding,Machine Leanring and Deep Leanring. 
+                I like reading biographies of great men.
+                I think Jungian psychology might have the key.
+                Someday i would love to work on video games.
               </p>
               <code className="block bg-gray-900 p-4 rounded-lg text-green-400 text-sm md:text-base overflow-x-auto">
                 tars.set_humor(level=100)
