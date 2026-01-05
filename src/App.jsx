@@ -6,30 +6,32 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans flex flex-col md:flex-row">
-      {/* Navbar */}
+      {/* --- Sidebar Navbar --- */}
       <nav className="
         fixed md:static
         top-0 left-0
         w-full md:w-64
         h-auto md:h-screen
         border-b md:border-b-0 md:border-r border-gray-800
-        px-6 py-4 md:py-10
+        px-6 py-4 md:py-12
         flex flex-col
         bg-black/90 backdrop-blur-md md:bg-black
         z-50
       ">
-        <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-10 text-center md:text-left">
+        <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-12 text-center md:text-left tracking-tight">
           Mohammad Umair
         </h1>
         
-        {/* Navigation Links - Horizontal on mobile, Vertical on desktop */}
-        <div className="flex flex-row md:flex-col justify-center md:justify-start gap-4 md:gap-6 text-sm md:text-lg">
+        {/* Navigation Links */}
+        <div className="flex flex-row md:flex-col justify-center md:justify-start gap-5 md:gap-6 text-sm md:text-lg">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActive(tab)}
-              className={`transition-all duration-300 ${
-                active === tab ? "text-white font-semibold" : "text-gray-400 hover:text-white"
+              className={`transition-all duration-300 hover:scale-105 ${
+                active === tab 
+                ? "text-white font-semibold underline underline-offset-8 decoration-gray-600 md:no-underline" 
+                : "text-gray-400 hover:text-white"
               }`}
             >
               {tab}
@@ -38,62 +40,113 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Page Content */}
+      {/* --- Main Content Area --- */}
       <main className="
         flex-1
-        pt-32 md:pt-10 /* More padding top on mobile to clear the fixed nav */
+        pt-32 md:pt-0 /* Padding for mobile fixed nav */
+        md:flex md:items-center /* Center content vertically on desktop */
         p-6 md:p-16
         animate-fadeIn
       ">
+        
+        {/* --- Home Section --- */}
         {active === "Home" && (
-          <section className="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-            {/* Text Container */}
-            <div className="text-center md:text-left order-2 md:order-1">
-              <h2 className="text-4xl md:text-6xl font-semibold mb-4">Welcome</h2>
-              <p className="text-gray-400 text-lg leading-relaxed max-w-md">
-                This website is still under construction. I'm a data scientist & Python developer exploring the web.
-              </p>
-            </div>
-
-            {/* Image Container */}
+          <section className="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+            {/* Image (Shows first on mobile) */}
             <div className="flex-shrink-0 order-1 md:order-2">
               <img 
                 src="/my-portfolio/MyPhoto.jpg" 
                 alt="Mohammad Umair" 
-                className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl border-2 border-gray-800 shadow-2xl"
+                className="w-44 h-44 md:w-72 md:h-72 object-cover rounded-3xl border-2 border-gray-800 shadow-2xl"
               />
+            </div>
+
+            {/* Text (Shows second on mobile) */}
+            <div className="text-center md:text-left order-2 md:order-1">
+              <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+                Welcome
+              </h2>
+              <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
+                Hi, I'm Mohammad. This website is still under construction. 
+                I'm a Data Analyst and Python Developer building cool things with data.
+              </p>
             </div>
           </section>
         )}
 
+        {/* --- Projects Section --- */}
         {active === "Projects" && (
-          <section className="max-w-3xl">
-            <h2 className="text-4xl font-semibold mb-6">Projects</h2>
-            <ul className="space-y-4">
-              <li>
-                <a 
-                  href="https://github.com/muwk/EDA-Youtube_Trending_Videos" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white text-xl transition-colors flex items-center gap-2"
-                >
-                  <span className="text-blue-500">→</span> YouTube Trending EDA
-                </a>
-              </li>
-              <li className="text-gray-500 italic">More projects coming soon...</li>
-            </ul>
+          <section className="max-w-3xl w-full">
+            <h2 className="text-4xl font-bold mb-8">Projects</h2>
+            <div className="grid gap-6">
+              <a 
+                href="https://github.com/muwk/EDA-Youtube_Trending_Videos" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
+              >
+                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                  YouTube Trending EDA →
+                </h3>
+                <p className="text-gray-500 mt-2">Exploratory Data Analysis using Python and Pandas.</p>
+              </a>
+              
+              <div className="p-6 border border-gray-800 border-dashed rounded-xl">
+                <p className="text-gray-600">More projects coming soon...</p>
+              </div>
+            </div>
           </section>
         )}
 
-        {/* About & Contact sections stay similar but ensure text-center md:text-left is applied */}
+        {/* --- About Section --- */}
+        {active === "About" && (
+          <section className="max-w-2xl">
+            <h2 className="text-4xl font-bold mb-6">About Me</h2>
+            <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
+               <p>
+                I am a Data Analyst with a passion for Python development. 
+                I love exploring real-world datasets and uncovering stories hidden in numbers.
+              </p>
+              <code className="block bg-gray-900 p-4 rounded-lg text-green-400">
+                tars.set_humor(level=100)
+              </code>
+            </div>
+          </section>
+        )}
+
+        {/* --- Contact Section --- */}
+        {active === "Contact" && (
+          <section className="max-w-3xl">
+            <h2 className="text-4xl font-bold mb-8">Get in Touch</h2>
+            <div className="space-y-6">
+              <div>
+                <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">Email</p>
+                <a href="mailto:umairwachkoo@gmail.com" className="text-xl hover:text-blue-400 transition-colors">
+                  umairwachkoo@gmail.com
+                </a>
+              </div>
+              <div>
+                <p className="text-gray-500 uppercase tracking-widest text-xs font-bold">LinkedIn</p>
+                <a 
+                  href="https://www.linkedin.com/in/mohammad-umair-858566289/" 
+                  target="_blank" 
+                  className="text-xl hover:text-blue-400 transition-colors"
+                >
+                  Connect with me
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
+      {/* Fade-in Animation */}
       <style>{`
         .animate-fadeIn {
-          animation: fadeIn 0.5s ease-out;
+          animation: fadeIn 0.6s ease-out forwards;
         }
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
+          from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
