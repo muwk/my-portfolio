@@ -116,10 +116,7 @@ export default function App() {
 
 
 
-
-
-              
-              <div className="p-6 border border-gray-800 border-dashed rounded-xl">
+        <div className="p-6 border border-gray-800 border-dashed rounded-xl">
                 <p className="text-gray-600">More projects coming soon...</p>
               </div>
             </div>
@@ -134,7 +131,7 @@ export default function App() {
                <p>
                 I am a Data Scientist with a passion for Coding,Machine Leanring and Deep Leanring. 
                 I like reading biographies of great men.
-                I think Jungian psychology might have the key.
+                Intrested in Jungian psychology .
                 Someday i would love to work on video games.
               </p>
               <code className="block bg-gray-900 p-4 rounded-lg text-green-400 text-sm md:text-base overflow-x-auto">
