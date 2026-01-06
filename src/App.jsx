@@ -78,19 +78,46 @@ export default function App() {
         {/* --- Projects Section --- */}
         {active === "Projects" && (
           <section className="max-w-3xl w-full">
-            <h2 className="text-4xl font-bold mb-8 text-center md:text-left">Projects</h2>
-            <div className="grid gap-6">
-              <a 
-                href="https://github.com/muwk/EDA-Youtube_Trending_Videos" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
-              >
-                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-                  YouTube Trending EDA →
-                </h3>
-                <p className="text-gray-500 mt-2">Exploratory Data Analysis using Python and Pandas.</p>
-              </a>
+  <h2 className="text-4xl font-bold mb-8 text-center md:text-left">
+    Projects
+  </h2>
+
+  <div className="grid gap-6">
+    {/* Project 1 — ML (FIRST) */}
+    <a
+      href="https://github.com/muwk/house-price-prediction"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
+    >
+      <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+        House Price Prediction →
+      </h3>
+      <p className="text-gray-500 mt-2">
+        Machine Learning project with data cleaning, feature engineering,
+        regression,decu=ision tree,XGBregressor models, and performance evaluation.
+      </p>
+    </a>
+
+    {/* Project 2 — EDA */}
+    <a
+      href="https://github.com/muwk/EDA-Youtube_Trending_Videos"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
+    >
+      <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+        YouTube Trending EDA →
+      </h3>
+      <p className="text-gray-500 mt-2">
+        Exploratory Data Analysis using Python, Pandas, and data visualization.
+      </p>
+    </a>
+
+
+
+
+
               
               <div className="p-6 border border-gray-800 border-dashed rounded-xl">
                 <p className="text-gray-600">More projects coming soon...</p>

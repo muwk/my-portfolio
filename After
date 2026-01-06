@@ -1,0 +1,12 @@
+To push code:
+git add .
+git commit -m "update"
+git push origin main
+npm run deploy
+
+something that helped:
+npm run build
+
+npm install gh-pages --save-dev
+
+npm run deploy
