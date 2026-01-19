@@ -95,11 +95,30 @@ export default function App() {
       </h3>
       <p className="text-gray-500 mt-2">
         Machine Learning project with data cleaning, feature engineering,
-        regression,decu=ision tree,XGBregressor models, and performance evaluation.
+        regression,decision tree,XGBregressor models, and performance evaluation.
       </p>
     </a>
 
+
     {/* Project 2 — EDA */}
+    <a
+      href="https://github.com/muwk/predicting-test-score"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
+    >
+      <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+        YouTube Trending EDA →
+      </h3>
+      <p className="text-gray-500 mt-2">
+        Machine Learning project with data cleaning, feature engineering,
+        XGBregressor models, and performance evaluation.
+        KAGGLE SEASON 6 EPISOD ``
+      </p>
+    </a>
+
+
+    {/* Project 3 — EDA */}
     <a
       href="https://github.com/muwk/EDA-Youtube_Trending_Videos"
       target="_blank"
