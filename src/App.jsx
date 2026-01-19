@@ -108,7 +108,7 @@ export default function App() {
       className="group p-6 border border-gray-800 rounded-xl hover:bg-gray-900 transition-all"
     >
       <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-        YouTube Trending EDA →
+         Test Score→
       </h3>
       <p className="text-gray-500 mt-2">
         Machine Learning project with data cleaning, feature engineering,
